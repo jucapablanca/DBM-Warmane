@@ -82,9 +82,9 @@ local function currentFullDate()
 end
 
 DBM = {
-	Revision = parseCurseDate("20250513110117"),
-	DisplayVersion = "10.1.13 alpha", -- the string that is shown as version
-	ReleaseRevision = releaseDate(2024, 07, 20) -- the date of the latest stable version that is available, optionally pass hours, minutes, and seconds for multiple releases in one day
+	Revision = parseCurseDate("20250715233000"),
+	DisplayVersion = "10.1.14 mod by capablanca", -- the string that is shown as version
+	ReleaseRevision = releaseDate(2025, 07, 15) -- the date of the latest stable version that is available, optionally pass hours, minutes, and seconds for multiple releases in one day
 }
 
 local fakeBWVersion = 7558
@@ -145,10 +145,10 @@ DBM.DefaultOptions = {
 	SpecialWarningSound4 = "Sound\\Creature\\HoodWolf\\HoodWolfTransformPlayer01.wav",
 	SpecialWarningSound5 = "Sound\\Creature\\Loathstare\\Loa_Naxx_Aggro02.wav",
 	ModelSoundValue = "Short",
-	CountdownVoice = "Corsica",
-	CountdownVoice2 = "Kolt",
-	CountdownVoice3 = "Smooth",
-	PullVoice = "Corsica",
+	CountdownVoice = "Neryssa",
+	CountdownVoice2 = "Neryssa",
+	CountdownVoice3 = "Neryssa",
+	PullVoice = "Neryssa",
 	ChosenVoicePack2 = (GetLocale() == "enUS" or GetLocale() == "enGB") and "VEM" or "None",
 	VPReplacesAnnounce = true,
 	VPReplacesSA1 = true,
@@ -9958,16 +9958,16 @@ do
 			path = voice
 		elseif voice == 2 then
 			maxCount = countvoice2max or 10
-			path = countpath2 or "Interface\\AddOns\\DBM-Core\\Sounds\\Kolt\\"
+			path = countpath2 or "Interface\\AddOns\\DBM-Core\\Sounds\\Neryssa\\"
 		elseif voice == 3 then
 			maxCount = countvoice3max or 5
-			path = countpath3 or "Interface\\AddOns\\DBM-Core\\Sounds\\Smooth\\"
+			path = countpath3 or "Interface\\AddOns\\DBM-Core\\Sounds\\Neryssa\\"
 		elseif voice == 4 then
 			maxCount = countvoice4max or 10
-			path = countpath4 or "Interface\\AddOns\\DBM-Core\\Sounds\\Corsica\\"
+			path = countpath4 or "Interface\\AddOns\\DBM-Core\\Sounds\\Neryssa\\"
 		else
 			maxCount = countvoice1max or 10
-			path = countpath1 or "Interface\\AddOns\\DBM-Core\\Sounds\\Corsica\\"
+			path = countpath1 or "Interface\\AddOns\\DBM-Core\\Sounds\\Neryssa\\"
 		end
 		if not path then--Should not happen but apparently it does somehow
 			DBM:Debug("Voice path failed in countdownProtoType:Start.")
